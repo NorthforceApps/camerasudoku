@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7WZWQ9PQ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Y7WZWQ9PQ7');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Sudoku solver that works offline — Camera Sudoku</title>
+<meta name="description" content="Solve and learn Sudoku without an internet connection. What works offline in Camera Sudoku, and what needs a connection.">
+<link rel="canonical" href="https://northforceapps.com/camerasudoku/guides/sudoku-solver-offline.html">
+<meta name="theme-color" content="#0458a1">
+<meta name="keywords" content="sudoku solver offline, offline sudoku app, sudoku no internet, sudoku app for flights, sudoku solver app android">
+<link rel="alternate" hreflang="en" href="https://northforceapps.com/camerasudoku/guides/sudoku-solver-offline.html">
+<link rel="alternate" hreflang="x-default" href="https://northforceapps.com/camerasudoku/guides/sudoku-solver-offline.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Camera Sudoku">
+<meta property="og:locale" content="en">
+<meta property="og:title" content="A Sudoku solver that works offline">
+<meta property="og:description" content="Solve and learn Sudoku without an internet connection. What works offline in Camera Sudoku, and what needs a connection.">
+<meta property="og:url" content="https://northforceapps.com/camerasudoku/guides/sudoku-solver-offline.html">
+<meta property="og:image" content="https://northforceapps.com/camerasudoku/assets/feature_graphic.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Sudoku solver that works offline">
+<meta name="twitter:description" content="Solve and learn Sudoku without an internet connection. What works offline in Camera Sudoku, and what needs a connection.">
+<meta name="twitter:image" content="https://northforceapps.com/camerasudoku/assets/feature_graphic.png">
+<link rel="icon" href="/camerasudoku/assets/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="/camerasudoku/assets/icon.png">
+<link rel="manifest" href="/camerasudoku/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/camerasudoku/styles.css">
+<style>.doc{max-width:780px;margin:0 auto;padding:40px 24px 80px}
+  .doc h1{font-family:var(--serif);font-size:2.4rem;color:var(--teal-deep);margin-bottom:6px}
+  .doc h2{font-family:var(--serif);font-size:1.4rem;color:var(--ink);margin:30px 0 8px}
+  .doc p,.doc li{color:var(--ink-soft);margin:8px 0}
+  .doc ul{margin-left:20px}
+  .doc .eff{color:var(--stone);font-size:.95rem}
+  .doc .lede{margin-top:18px}
+  .doc .cta-card{margin-top:36px;padding:22px;border-radius:18px;background:var(--paper);border:1px solid rgba(10,18,33,.08)}
+  .doc h3{font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin:20px 0 6px}
+  .doc table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.95rem;display:block;overflow-x:auto}
+  .doc th,.doc td{border:1px solid rgba(10,18,33,.12);padding:8px 10px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+  .doc th{background:var(--paper);color:var(--ink)}
+  .doc code{font-size:.9em;background:var(--paper);padding:1px 4px;border-radius:4px}
+  .guide-hero{width:100%;height:auto;border-radius:18px;margin:18px 0 8px;display:block}
+  .doc h3{font-family:var(--serif);font-size:1.15rem;color:var(--teal-deep);margin:22px 0 6px}
+  .doc ol,.doc ul{margin-left:20px}
+  .doc ol li,.doc ul li{margin:6px 0}
+  .doc .faq{margin-top:34px}
+  .doc .faq h2{margin-bottom:12px}
+  .doc .faq details{background:var(--paper);border:1px solid rgba(10,18,33,.08);border-radius:14px;padding:18px 22px;margin-bottom:12px}
+  .doc .faq summary{font-weight:700;color:var(--ink);cursor:pointer;font-size:1.05rem;list-style:none}
+  .doc .faq summary::-webkit-details-marker{display:none}
+  .doc .faq details p{margin-top:10px;color:var(--ink-soft)}
+  .doc .related{margin-top:34px}
+  .doc .related ul{list-style:none;margin-left:0}
+  .doc .related li{margin:8px 0}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "inLanguage": "en",
+  "headline": "A Sudoku solver that works offline",
+  "description": "Solve and learn Sudoku without an internet connection. What works offline in Camera Sudoku, and what needs a connection.",
+  "mainEntityOfPage": "https://northforceapps.com/camerasudoku/guides/sudoku-solver-offline.html",
+  "image": "https://northforceapps.com/camerasudoku/assets/feature_graphic.png",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Northforce Apps"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does scanning work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Grid detection and digit recognition run on the phone, so you can scan with no connection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What needs a connection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ads, buying or restoring Pro, and sending feedback email. Solving, hints and saved puzzles work offline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. There is no sign-in; your puzzles are stored on your phone."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/camerasudoku/"><img src="/camerasudoku/assets/icon.png" alt="Camera Sudoku icon">Camera Sudoku</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="nav-sec" href="/camerasudoku/#features">Features</a>
+      <a class="nav-sec" href="/camerasudoku/#how">How it works</a>
+      <a href="/camerasudoku/guides/">Guides</a>
+      
+    </nav>
+  </div>
+</header>
+<main class="doc">
+  <p class="eff"><a href="/camerasudoku/guides/">← All guides</a></p>
+  <h1>A Sudoku solver that works offline</h1>
+<p>Yes, you can solve Sudoku offline on Android. <strong>Camera Sudoku</strong> scans, stores and solves puzzles entirely on your phone, and its step-by-step hints are computed on the device too, so flights, trains and places without signal are fine.</p>
+
+<h2>What works without a connection</h2>
+<ul>
+  <li><strong>Camera scanning.</strong> Grid detection and digit recognition run on the phone, with no upload.</li>
+  <li><strong>Playing and solving</strong> any saved, built-in or generated puzzle.</li>
+  <li><strong>Smart Hints</strong>: all 20+ techniques, including chains.</li>
+  <li><strong>The random generator</strong> and the 400+ built-in rated puzzles.</li>
+  <li><strong>My Puzzles</strong>: your saved collection is stored on the phone.</li>
+  <li><strong>Import and export</strong> by copying and pasting puzzle text.</li>
+</ul>
+
+<h2>What needs a connection</h2>
+<ul>
+  <li><strong>Ads</strong> in the free version. Without a connection, no ads load.</li>
+  <li><strong>Buying or restoring Pro</strong> through Google Play.</li>
+  <li><strong>Sending feedback</strong>: the Report bug button opens your email app.</li>
+</ul>
+<p>Usage statistics and crash reports are queued and sent the next time you are online.</p>
+
+<h2>Getting ready for a trip</h2>
+<ol>
+  <li>Install Camera Sudoku and open it once while online.</li>
+  <li>Scan a few puzzles from the book you are bringing, or generate some, so they are waiting in My Puzzles.</li>
+  <li>For a long trip, pick harder levels and try to solve them without hints.</li>
+</ol>
+
+<h2>No account, no cloud</h2>
+<p>There is no sign-in. Your puzzles and progress live on your phone, which is also why they work offline. If you change phones, Android's own device backup can carry the app's data across, if you have it turned on.</p>
+
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>Does scanning work offline?</summary><p>Yes. Grid detection and digit recognition run on the phone, so you can scan with no connection.</p></details>
+    <details><summary>What needs a connection?</summary><p>Ads, buying or restoring Pro, and sending feedback email. Solving, hints and saved puzzles work offline.</p></details>
+    <details><summary>Do I need an account?</summary><p>No. There is no sign-in; your puzzles are stored on your phone.</p></details>
+  </section>
+  <section class="related">
+    <h2>Related guides</h2>
+    <ul>
+      <li><a href="/camerasudoku/guides/scan-sudoku-with-camera.html">How to scan a Sudoku with your camera</a></li>
+      <li><a href="/camerasudoku/guides/sudoku-solving-strategies.html">Sudoku strategies explained</a></li>
+    </ul>
+  </section>
+  <div class="cta-card">
+    <h2>Ready to try it?</h2>
+    <p>Camera Sudoku is free to install. Scan your first puzzle in seconds.</p>
+    <p><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.sudoku.camerasudoku&amp;referrer=utm_source%3Dcamerasudoku_site%26utm_medium%3Dorganic%26utm_campaign%3Dguide_sudoku_solver_offline%26utm_content%3Den" rel="noopener"><img src="/camerasudoku/assets/badge-en.svg" alt="Get it on Google Play" width="186" height="55" loading="lazy"></a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="y">2026</span> Camera Sudoku · Northforce Apps</div>
+    <nav aria-label="Footer">
+      <a href="/camerasudoku/privacy.html">Privacy</a>
+      <a href="mailto:northforceapps@protonmail.com">Contact</a>
+      <a href="https://play.google.com/store/apps/details?id=com.sudoku.camerasudoku&amp;referrer=utm_source%3Dcamerasudoku_site%26utm_medium%3Dorganic%26utm_campaign%3Dguide_sudoku_solver_offline%26utm_content%3Den" rel="noopener">Google Play</a>
+    </nav>
+  </div>
+  <div class="wrap foot-more">
+    <span class="foot-more-label">More from Northforce Apps</span>
+    <nav aria-label="Other Northforce Apps"><a href="https://northforceapps.com/cue-loop/">CueLoop</a><a href="https://northforceapps.com/gpslogger/">GPS Logger</a><a href="https://northforceapps.com/remotemic/">RemoteMic</a><a href="https://northforceapps.com/webcam/">WebCam</a></nav>
+  </div>
+</footer>
+<script src="/camerasudoku/app.js"></script>
+</body>
+</html>

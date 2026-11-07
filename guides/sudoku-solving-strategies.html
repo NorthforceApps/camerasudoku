@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7WZWQ9PQ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Y7WZWQ9PQ7');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sudoku solving strategies, from singles to chains — Camera Sudoku</title>
+<meta name="description" content="A plain-language tour of the Sudoku techniques Camera Sudoku's Smart Hints teach: singles, pairs, pointing, X-Wing, Swordfish, wings, Unique Rectangles and chains.">
+<link rel="canonical" href="https://northforceapps.com/camerasudoku/guides/sudoku-solving-strategies.html">
+<meta name="theme-color" content="#0458a1">
+<meta name="keywords" content="sudoku strategies, sudoku techniques, x-wing sudoku, swordfish sudoku, y-wing, sudoku hints app, how to solve hard sudoku">
+<link rel="alternate" hreflang="en" href="https://northforceapps.com/camerasudoku/guides/sudoku-solving-strategies.html">
+<link rel="alternate" hreflang="x-default" href="https://northforceapps.com/camerasudoku/guides/sudoku-solving-strategies.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Camera Sudoku">
+<meta property="og:locale" content="en">
+<meta property="og:title" content="Sudoku solving strategies, from singles to chains">
+<meta property="og:description" content="A plain-language tour of the Sudoku techniques Camera Sudoku's Smart Hints teach: singles, pairs, pointing, X-Wing, Swordfish, wings, Unique Rectangles and chains.">
+<meta property="og:url" content="https://northforceapps.com/camerasudoku/guides/sudoku-solving-strategies.html">
+<meta property="og:image" content="https://northforceapps.com/camerasudoku/assets/feature_graphic.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sudoku solving strategies, from singles to chains">
+<meta name="twitter:description" content="A plain-language tour of the Sudoku techniques Camera Sudoku's Smart Hints teach: singles, pairs, pointing, X-Wing, Swordfish, wings, Unique Rectangles and chains.">
+<meta name="twitter:image" content="https://northforceapps.com/camerasudoku/assets/feature_graphic.png">
+<link rel="icon" href="/camerasudoku/assets/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="/camerasudoku/assets/icon.png">
+<link rel="manifest" href="/camerasudoku/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/camerasudoku/styles.css">
+<style>.doc{max-width:780px;margin:0 auto;padding:40px 24px 80px}
+  .doc h1{font-family:var(--serif);font-size:2.4rem;color:var(--teal-deep);margin-bottom:6px}
+  .doc h2{font-family:var(--serif);font-size:1.4rem;color:var(--ink);margin:30px 0 8px}
+  .doc p,.doc li{color:var(--ink-soft);margin:8px 0}
+  .doc ul{margin-left:20px}
+  .doc .eff{color:var(--stone);font-size:.95rem}
+  .doc .lede{margin-top:18px}
+  .doc .cta-card{margin-top:36px;padding:22px;border-radius:18px;background:var(--paper);border:1px solid rgba(10,18,33,.08)}
+  .doc h3{font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin:20px 0 6px}
+  .doc table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.95rem;display:block;overflow-x:auto}
+  .doc th,.doc td{border:1px solid rgba(10,18,33,.12);padding:8px 10px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+  .doc th{background:var(--paper);color:var(--ink)}
+  .doc code{font-size:.9em;background:var(--paper);padding:1px 4px;border-radius:4px}
+  .guide-hero{width:100%;height:auto;border-radius:18px;margin:18px 0 8px;display:block}
+  .doc h3{font-family:var(--serif);font-size:1.15rem;color:var(--teal-deep);margin:22px 0 6px}
+  .doc ol,.doc ul{margin-left:20px}
+  .doc ol li,.doc ul li{margin:6px 0}
+  .doc .faq{margin-top:34px}
+  .doc .faq h2{margin-bottom:12px}
+  .doc .faq details{background:var(--paper);border:1px solid rgba(10,18,33,.08);border-radius:14px;padding:18px 22px;margin-bottom:12px}
+  .doc .faq summary{font-weight:700;color:var(--ink);cursor:pointer;font-size:1.05rem;list-style:none}
+  .doc .faq summary::-webkit-details-marker{display:none}
+  .doc .faq details p{margin-top:10px;color:var(--ink-soft)}
+  .doc .related{margin-top:34px}
+  .doc .related ul{list-style:none;margin-left:0}
+  .doc .related li{margin:8px 0}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "inLanguage": "en",
+  "headline": "Sudoku solving strategies, from singles to chains",
+  "description": "A plain-language tour of the Sudoku techniques Camera Sudoku's Smart Hints teach: singles, pairs, pointing, X-Wing, Swordfish, wings, Unique Rectangles and chains.",
+  "mainEntityOfPage": "https://northforceapps.com/camerasudoku/guides/sudoku-solving-strategies.html",
+  "image": "https://northforceapps.com/camerasudoku/assets/feature_graphic.png",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Northforce Apps"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which technique should I learn first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Naked and hidden singles solve most easy puzzles. Then learn pairs and pointing; X-Wing is the usual next step for hard puzzles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Smart Hint use guessing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every hint is a logical step with a named technique. If you want the answer anyway, you can reveal a single cell."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do hints lower my score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, hints reduce your score multiplier, so solving unaided scores more. The Sudoku King trophy needs a solve with no mistakes, hints or checks."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/camerasudoku/"><img src="/camerasudoku/assets/icon.png" alt="Camera Sudoku icon">Camera Sudoku</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="nav-sec" href="/camerasudoku/#features">Features</a>
+      <a class="nav-sec" href="/camerasudoku/#how">How it works</a>
+      <a href="/camerasudoku/guides/">Guides</a>
+      
+    </nav>
+  </div>
+</header>
+<main class="doc">
+  <p class="eff"><a href="/camerasudoku/guides/">← All guides</a></p>
+  <h1>Sudoku solving strategies, from singles to chains</h1>
+<p>Sudoku is solved with a small set of logical techniques, applied from simplest to hardest. Camera Sudoku's <strong>Smart Hint</strong> always looks for the simplest step that works, shows it on your grid, and names the technique. Here is that ladder in plain language, so you know what each hint is teaching you.</p>
+
+<h2>1. Singles: where most puzzles are won</h2>
+<ul>
+  <li><strong>Naked Single</strong> — a cell has only one possible candidate left. Place it.</li>
+  <li><strong>Hidden Single</strong> — a digit can go in only one cell of a row, column or box, even if that cell has other candidates.</li>
+</ul>
+<p>Easy and medium puzzles fall to singles alone. Camera Sudoku can auto-fill singles for you once you have the hang of them.</p>
+
+<h2>2. Pairs, triples and quads</h2>
+<p>When two cells in a unit share exactly the same two candidates (a <strong>Naked Pair</strong>), those digits must go in those cells, so you can remove them from every other cell of the unit. <strong>Hidden Pairs</strong> work the other way round: two digits that fit only in two cells claim those cells. The same idea scales to triples and quads.</p>
+
+<h2>3. Pointing and claiming</h2>
+<p>If all candidates for a digit inside a box line up in one row or column, that digit can be removed from the rest of that row or column (<strong>pointing</strong>). The reverse, a row's candidates confined to one box, is <strong>claiming</strong> or box/line reduction.</p>
+
+<h2>4. Fish: X-Wing, Swordfish, Jellyfish</h2>
+<p>An <strong>X-Wing</strong> is a digit that appears as a candidate in exactly two cells in each of two rows, and those cells share the same two columns. The four corners form a rectangle, and the digit can be removed from the rest of those columns. <strong>Swordfish</strong> (three rows) and <strong>Jellyfish</strong> (four) are bigger versions. <em>Finned</em> fish allow one extra candidate near a corner.</p>
+
+<h2>5. Wings and short patterns</h2>
+<ul>
+  <li><strong>Y-Wing</strong>, <strong>XYZ-Wing</strong> and <strong>WXYZ-Wing</strong> — a pivot cell and two or three "pincers" that together force a digit out of the cells they all see.</li>
+  <li><strong>Skyscraper</strong> and <strong>Two-String Kite</strong> — two strong links on one digit joined at one end.</li>
+  <li><strong>Simple Colouring</strong> — follow a chain of strong links on one digit, alternating two colours, to find a contradiction.</li>
+</ul>
+
+<h2>6. Unique Rectangles</h2>
+<p>A proper Sudoku has one solution. Four cells in two rows, two columns and two boxes cannot all end up holding the same two digits, because the digits could then swap. <strong>Unique Rectangle</strong> hints use that rule to remove the candidate that would create the deadly pattern.</p>
+
+<h2>7. Chains</h2>
+<p>When nothing simpler works, Smart Hint builds a chain of alternating strong and weak links (<strong>X-Chains</strong>, <strong>XY-Chains</strong> and general <strong>Alternating Inference Chains</strong>) and draws it on the board, so you can follow the logic link by link.</p>
+
+<h2>How to practise</h2>
+<ol>
+  <li>Play a puzzle one level harder than feels comfortable.</li>
+  <li>When stuck, tap Smart Hint and read the technique name before you look at the answer.</li>
+  <li>Try to spot the same pattern yourself on the next puzzle before asking again.</li>
+</ol>
+<p>Hints lower your score multiplier, so solving unaided scores more. The Sudoku King trophy goes to a perfect solve with no mistakes, hints or checks.</p>
+
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>Which technique should I learn first?</summary><p>Naked and hidden singles solve most easy puzzles. Then learn pairs and pointing; X-Wing is the usual next step for hard puzzles.</p></details>
+    <details><summary>Does Smart Hint use guessing?</summary><p>No. Every hint is a logical step with a named technique. If you want the answer anyway, you can reveal a single cell.</p></details>
+    <details><summary>Do hints lower my score?</summary><p>Yes, hints reduce your score multiplier, so solving unaided scores more. The Sudoku King trophy needs a solve with no mistakes, hints or checks.</p></details>
+  </section>
+  <section class="related">
+    <h2>Related guides</h2>
+    <ul>
+      <li><a href="/camerasudoku/guides/scan-sudoku-with-camera.html">How to scan a Sudoku with your camera</a></li>
+      <li><a href="/camerasudoku/guides/sudoku-solver-offline.html">Solve Sudoku offline</a></li>
+    </ul>
+  </section>
+  <div class="cta-card">
+    <h2>Ready to try it?</h2>
+    <p>Camera Sudoku is free to install. Scan your first puzzle in seconds.</p>
+    <p><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.sudoku.camerasudoku&amp;referrer=utm_source%3Dcamerasudoku_site%26utm_medium%3Dorganic%26utm_campaign%3Dguide_sudoku_solving_strategies%26utm_content%3Den" rel="noopener"><img src="/camerasudoku/assets/badge-en.svg" alt="Get it on Google Play" width="186" height="55" loading="lazy"></a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="y">2026</span> Camera Sudoku · Northforce Apps</div>
+    <nav aria-label="Footer">
+      <a href="/camerasudoku/privacy.html">Privacy</a>
+      <a href="mailto:northforceapps@protonmail.com">Contact</a>
+      <a href="https://play.google.com/store/apps/details?id=com.sudoku.camerasudoku&amp;referrer=utm_source%3Dcamerasudoku_site%26utm_medium%3Dorganic%26utm_campaign%3Dguide_sudoku_solving_strategies%26utm_content%3Den" rel="noopener">Google Play</a>
+    </nav>
+  </div>
+  <div class="wrap foot-more">
+    <span class="foot-more-label">More from Northforce Apps</span>
+    <nav aria-label="Other Northforce Apps"><a href="https://northforceapps.com/cue-loop/">CueLoop</a><a href="https://northforceapps.com/gpslogger/">GPS Logger</a><a href="https://northforceapps.com/remotemic/">RemoteMic</a><a href="https://northforceapps.com/webcam/">WebCam</a></nav>
+  </div>
+</footer>
+<script src="/camerasudoku/app.js"></script>
+</body>
+</html>

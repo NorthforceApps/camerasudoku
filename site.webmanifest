@@ -1,0 +1,13 @@
+{
+  "name": "Camera Sudoku Solver Offline",
+  "short_name": "Camera Sudoku",
+  "description": "Scan a printed or handwritten Sudoku with your Android camera and solve it with step-by-step hints. Recognition runs on your phone.",
+  "start_url": "/camerasudoku/",
+  "scope": "/camerasudoku/",
+  "display": "standalone",
+  "background_color": "#eaf2fc",
+  "theme_color": "#0458a1",
+  "icons": [
+    { "src": "assets/icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
