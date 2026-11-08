@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7WZWQ9PQ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Y7WZWQ9PQ7');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>X-Wing in Sudoku: the strategy explained with an example — Camera Sudoku</title>
+<meta name="description" content="How the X-Wing Sudoku technique works, how to find one step by step, and a real example from Camera Sudoku's Smart Hint. Plus Finned X-Wing, Swordfish and Jellyfish.">
+<link rel="canonical" href="https://northforceapps.com/camerasudoku/guides/x-wing-sudoku.html">
+<meta name="theme-color" content="#0458a1">
+<meta name="keywords" content="x-wing sudoku, sudoku x wing, x-wing strategy, x wing technique, finned x-wing, swordfish sudoku, hard sudoku techniques">
+<link rel="alternate" hreflang="en" href="https://northforceapps.com/camerasudoku/guides/x-wing-sudoku.html">
+<link rel="alternate" hreflang="x-default" href="https://northforceapps.com/camerasudoku/guides/x-wing-sudoku.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Camera Sudoku">
+<meta property="og:locale" content="en">
+<meta property="og:title" content="X-Wing in Sudoku: the strategy explained with an example">
+<meta property="og:description" content="How the X-Wing Sudoku technique works, how to find one step by step, and a real example from Camera Sudoku's Smart Hint. Plus Finned X-Wing, Swordfish and Jellyfish.">
+<meta property="og:url" content="https://northforceapps.com/camerasudoku/guides/x-wing-sudoku.html">
+<meta property="og:image" content="https://northforceapps.com/camerasudoku/assets/feature_graphic.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="X-Wing in Sudoku: the strategy explained with an example">
+<meta name="twitter:description" content="How the X-Wing Sudoku technique works, how to find one step by step, and a real example from Camera Sudoku's Smart Hint. Plus Finned X-Wing, Swordfish and Jellyfish.">
+<meta name="twitter:image" content="https://northforceapps.com/camerasudoku/assets/feature_graphic.png">
+<link rel="icon" href="/camerasudoku/assets/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="/camerasudoku/assets/icon.png">
+<link rel="manifest" href="/camerasudoku/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/camerasudoku/styles.css">
+<style>.doc{max-width:780px;margin:0 auto;padding:40px 24px 80px}
+  .doc h1{font-family:var(--serif);font-size:2.4rem;color:var(--teal-deep);margin-bottom:6px}
+  .doc h2{font-family:var(--serif);font-size:1.4rem;color:var(--ink);margin:30px 0 8px}
+  .doc p,.doc li{color:var(--ink-soft);margin:8px 0}
+  .doc ul{margin-left:20px}
+  .doc .eff{color:var(--stone);font-size:.95rem}
+  .doc .lede{margin-top:18px}
+  .doc .cta-card{margin-top:36px;padding:22px;border-radius:18px;background:var(--paper);border:1px solid rgba(10,18,33,.08)}
+  .doc h3{font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin:20px 0 6px}
+  .doc table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.95rem;display:block;overflow-x:auto}
+  .doc th,.doc td{border:1px solid rgba(10,18,33,.12);padding:8px 10px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+  .doc th{background:var(--paper);color:var(--ink)}
+  .doc code{font-size:.9em;background:var(--paper);padding:1px 4px;border-radius:4px}
+  .guide-hero{width:100%;height:auto;border-radius:18px;margin:18px 0 8px;display:block}
+  .doc h3{font-family:var(--serif);font-size:1.15rem;color:var(--teal-deep);margin:22px 0 6px}
+  .doc ol,.doc ul{margin-left:20px}
+  .doc ol li,.doc ul li{margin:6px 0}
+  .doc .faq{margin-top:34px}
+  .doc .faq h2{margin-bottom:12px}
+  .doc .faq details{background:var(--paper);border:1px solid rgba(10,18,33,.08);border-radius:14px;padding:18px 22px;margin-bottom:12px}
+  .doc .faq summary{font-weight:700;color:var(--ink);cursor:pointer;font-size:1.05rem;list-style:none}
+  .doc .faq summary::-webkit-details-marker{display:none}
+  .doc .faq details p{margin-top:10px;color:var(--ink-soft)}
+  .doc .related{margin-top:34px}
+  .doc .related ul{list-style:none;margin-left:0}
+  .doc .related li{margin:8px 0}
+  .doc figure{margin:26px auto;text-align:center}
+  .doc figure img,.doc figure video{display:block;margin:0 auto;height:auto;max-width:100%}
+  .doc figcaption{margin:12px auto 0;max-width:56ch;font-size:.93rem;color:var(--stone);line-height:1.5}
+  .doc .phone{width:min(280px,72vw);border-radius:30px;padding:9px;background:linear-gradient(155deg,#1a2a3a,#060b14);box-shadow:0 18px 44px rgba(8,12,23,.24);margin:0 auto}
+  .doc .phone img,.doc .phone video{width:100%;border-radius:22px;background:#060b14}
+  .doc .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;margin:26px 0;align-items:start}
+  .doc .shots figure{margin:0}
+  .doc .shots .phone{width:min(240px,72vw)}
+  .doc .tablet img{width:100%;border-radius:14px;border:1px solid rgba(10,18,33,.12);box-shadow:0 18px 44px rgba(8,12,23,.2)}
+  .doc .diagram svg{width:min(340px,86vw);height:auto;display:block;margin:0 auto}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "inLanguage": "en",
+  "headline": "X-Wing in Sudoku: the strategy explained with an example",
+  "description": "How the X-Wing Sudoku technique works, how to find one step by step, and a real example from Camera Sudoku's Smart Hint. Plus Finned X-Wing, Swordfish and Jellyfish.",
+  "mainEntityOfPage": "https://northforceapps.com/camerasudoku/guides/x-wing-sudoku.html",
+  "image": [
+    "https://northforceapps.com/camerasudoku/assets/screens/04-smart-hint.jpg",
+    "https://northforceapps.com/camerasudoku/assets/feature_graphic.png"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Northforce Apps"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When do I need an X-Wing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In harder puzzles, after singles, pairs and pointing stop making progress. It is usually the first advanced technique players learn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an X-Wing be found in columns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If a digit fits in exactly two cells in each of two columns, and those cells share the same two rows, remove the digit from the rest of those rows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a Finned X-Wing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An almost-X-Wing with one or two extra candidates in the same box as a corner. Eliminations are limited to cells that also see the fin. Smart Hint detects finned fish too."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "inLanguage": "en",
+  "name": "X-Wing in Sudoku: the strategy explained with an example",
+  "description": "How the X-Wing Sudoku technique works, how to find one step by step, and a real example from Camera Sudoku's Smart Hint. Plus Finned X-Wing, Swordfish and Jellyfish.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Pick a digit",
+      "text": "Choose one digit and look only at where it can still go."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Find rows with two candidates",
+      "text": "Find a row where that digit can go in exactly two cells, and note their columns."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Find the matching row",
+      "text": "Find a second row where the digit can go in exactly the same two columns. The four cells form a rectangle."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Eliminate in the columns",
+      "text": "Remove the digit from every other cell in those two columns. Repeat with rows and columns swapped."
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/camerasudoku/"><img src="/camerasudoku/assets/icon.png" alt="Camera Sudoku icon">Camera Sudoku</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="nav-sec" href="/camerasudoku/#features">Features</a>
+      <a class="nav-sec" href="/camerasudoku/#how">How it works</a>
+      <a href="/camerasudoku/guides/">Guides</a>
+      
+    </nav>
+  </div>
+</header>
+<main class="doc">
+  <p class="eff"><a href="/camerasudoku/guides/">← All guides</a></p>
+  <h1>X-Wing in Sudoku: the strategy explained with an example</h1>
+<p>An <strong>X-Wing</strong> in Sudoku is a pattern on one digit: in two rows, that digit can go in only two cells each, and those cells sit in the same two columns. The four cells form a rectangle. The digit must occupy two opposite corners, so it can be removed from every other cell in those two columns. The same works with rows and columns swapped.</p>
+
+<figure class="diagram">
+<svg viewBox="0 0 352 352" role="img" aria-labelledby="xw-t" xmlns="http://www.w3.org/2000/svg" font-family="Hanken Grotesk, Arial, sans-serif"><title id="xw-t">X-Wing diagram: digit 4 can go only in columns 3 and 8 in rows 2 and 7, so 4 is removed from the other cells of columns 3 and 8</title><rect x="24" y="24" width="324" height="324" fill="#fdfcff"/><rect x="24" y="60" width="324" height="36" fill="#dbe8f7"/><rect x="24" y="240" width="324" height="36" fill="#dbe8f7"/><rect x="96" y="24" width="36" height="324" fill="#fbe9d6" opacity=".75"/><rect x="276" y="24" width="36" height="324" fill="#fbe9d6" opacity=".75"/><line x1="24" y1="24" x2="24" y2="348" stroke="#06325e" stroke-width="2.4"/><line x1="24" y1="24" x2="348" y2="24" stroke="#06325e" stroke-width="2.4"/><line x1="60" y1="24" x2="60" y2="348" stroke="#9aa6b5" stroke-width="0.8"/><line x1="24" y1="60" x2="348" y2="60" stroke="#9aa6b5" stroke-width="0.8"/><line x1="96" y1="24" x2="96" y2="348" stroke="#9aa6b5" stroke-width="0.8"/><line x1="24" y1="96" x2="348" y2="96" stroke="#9aa6b5" stroke-width="0.8"/><line x1="132" y1="24" x2="132" y2="348" stroke="#06325e" stroke-width="2.4"/><line x1="24" y1="132" x2="348" y2="132" stroke="#06325e" stroke-width="2.4"/><line x1="168" y1="24" x2="168" y2="348" stroke="#9aa6b5" stroke-width="0.8"/><line x1="24" y1="168" x2="348" y2="168" stroke="#9aa6b5" stroke-width="0.8"/><line x1="204" y1="24" x2="204" y2="348" stroke="#9aa6b5" stroke-width="0.8"/><line x1="24" y1="204" x2="348" y2="204" stroke="#9aa6b5" stroke-width="0.8"/><line x1="240" y1="24" x2="240" y2="348" stroke="#06325e" stroke-width="2.4"/><line x1="24" y1="240" x2="348" y2="240" stroke="#06325e" stroke-width="2.4"/><line x1="276" y1="24" x2="276" y2="348" stroke="#9aa6b5" stroke-width="0.8"/><line x1="24" y1="276" x2="348" y2="276" stroke="#9aa6b5" stroke-width="0.8"/><line x1="312" y1="24" x2="312" y2="348" stroke="#9aa6b5" stroke-width="0.8"/><line x1="24" y1="312" x2="348" y2="312" stroke="#9aa6b5" stroke-width="0.8"/><line x1="348" y1="24" x2="348" y2="348" stroke="#06325e" stroke-width="2.4"/><line x1="24" y1="348" x2="348" y2="348" stroke="#06325e" stroke-width="2.4"/><text x="42.0" y="16" font-size="12" fill="#73777f" text-anchor="middle">1</text><text x="14" y="46.0" font-size="12" fill="#73777f" text-anchor="middle">1</text><text x="78.0" y="16" font-size="12" fill="#73777f" text-anchor="middle">2</text><text x="14" y="82.0" font-size="12" fill="#73777f" text-anchor="middle">2</text><text x="114.0" y="16" font-size="12" fill="#73777f" text-anchor="middle">3</text><text x="14" y="118.0" font-size="12" fill="#73777f" text-anchor="middle">3</text><text x="150.0" y="16" font-size="12" fill="#73777f" text-anchor="middle">4</text><text x="14" y="154.0" font-size="12" fill="#73777f" text-anchor="middle">4</text><text x="186.0" y="16" font-size="12" fill="#73777f" text-anchor="middle">5</text><text x="14" y="190.0" font-size="12" fill="#73777f" text-anchor="middle">5</text><text x="222.0" y="16" font-size="12" fill="#73777f" text-anchor="middle">6</text><text x="14" y="226.0" font-size="12" fill="#73777f" text-anchor="middle">6</text><text x="258.0" y="16" font-size="12" fill="#73777f" text-anchor="middle">7</text><text x="14" y="262.0" font-size="12" fill="#73777f" text-anchor="middle">7</text><text x="294.0" y="16" font-size="12" fill="#73777f" text-anchor="middle">8</text><text x="14" y="298.0" font-size="12" fill="#73777f" text-anchor="middle">8</text><text x="330.0" y="16" font-size="12" fill="#73777f" text-anchor="middle">9</text><text x="14" y="334.0" font-size="12" fill="#73777f" text-anchor="middle">9</text><rect x="114.0" y="78.0" width="180.0" height="180.0" fill="none" stroke="#0458a1" stroke-width="2.2" stroke-dasharray="6 5"/><circle cx="114.0" cy="78.0" r="12" fill="#f6d84a" stroke="#06325e" stroke-width="1.5"/><text x="114.0" y="83.0" font-size="15" font-weight="700" fill="#06325e" text-anchor="middle">4</text><circle cx="294.0" cy="78.0" r="12" fill="#f6d84a" stroke="#06325e" stroke-width="1.5"/><text x="294.0" y="83.0" font-size="15" font-weight="700" fill="#06325e" text-anchor="middle">4</text><circle cx="114.0" cy="258.0" r="12" fill="#f6d84a" stroke="#06325e" stroke-width="1.5"/><text x="114.0" y="263.0" font-size="15" font-weight="700" fill="#06325e" text-anchor="middle">4</text><circle cx="294.0" cy="258.0" r="12" fill="#f6d84a" stroke="#06325e" stroke-width="1.5"/><text x="294.0" y="263.0" font-size="15" font-weight="700" fill="#06325e" text-anchor="middle">4</text><text x="114.0" y="155.0" font-size="14" fill="#b3261e" text-anchor="middle">4</text><circle cx="114.0" cy="150.0" r="11" fill="none" stroke="#b3261e" stroke-width="2"/><line x1="105.0" y1="159.0" x2="123.0" y2="141.0" stroke="#b3261e" stroke-width="2"/><text x="114.0" y="335.0" font-size="14" fill="#b3261e" text-anchor="middle">4</text><circle cx="114.0" cy="330.0" r="11" fill="none" stroke="#b3261e" stroke-width="2"/><line x1="105.0" y1="339.0" x2="123.0" y2="321.0" stroke="#b3261e" stroke-width="2"/><text x="294.0" y="191.0" font-size="14" fill="#b3261e" text-anchor="middle">4</text><circle cx="294.0" cy="186.0" r="11" fill="none" stroke="#b3261e" stroke-width="2"/><line x1="285.0" y1="195.0" x2="303.0" y2="177.0" stroke="#b3261e" stroke-width="2"/><text x="294.0" y="47.0" font-size="14" fill="#b3261e" text-anchor="middle">4</text><circle cx="294.0" cy="42.0" r="11" fill="none" stroke="#b3261e" stroke-width="2"/><line x1="285.0" y1="51.0" x2="303.0" y2="33.0" stroke="#b3261e" stroke-width="2"/></svg>
+  <figcaption>In rows 2 and 7, digit 4 fits only in columns 3 and 8 (yellow). Any other 4 in those columns (red) can be removed.</figcaption>
+</figure>
+
+<h2>Why an X-Wing works</h2>
+<p>Look at row 2 in the diagram. Its 4 goes either in column 3 or in column 8. If it is in column 3, row 7's 4 cannot also be in column 3, so it must be in column 8. If row 2's 4 is in column 8, row 7's is in column 3. Either way, columns 3 and 8 each get their 4 from rows 2 and 7, so no other cell in those two columns can hold a 4.</p>
+<p>Note the direction: the pattern is found in the <em>rows</em>, and the eliminations happen in the <em>columns</em>. For a column-based X-Wing it is the other way round.</p>
+
+<h2>How to find an X-Wing</h2>
+<ol>
+  <li><strong>Pick one digit</strong> and look only at its candidates.</li>
+  <li><strong>Find rows where it appears exactly twice.</strong> Note which columns those two cells are in.</li>
+  <li><strong>Look for a second such row with the same two columns.</strong> That's the rectangle.</li>
+  <li><strong>Remove the digit</strong> from the other cells of those two columns. Then repeat the search with columns instead of rows.</li>
+</ol>
+
+<h2>A real example</h2>
+<p>Here is an X-Wing found by Camera Sudoku's Smart Hint. In rows 6 and 9, the digit 4 can only go in columns 4 and 7: the four yellow 4s. That removes the two other 4 candidates in column 4, circled in red. Column 7 has no other 4 candidates left, so nothing changes there.</p>
+
+<figure>
+  <div class="phone"><img src="/camerasudoku/assets/screens/04-smart-hint.jpg" alt="Smart Hint panel reading Eliminations – X-Wing, with four corner 4s marked in yellow and two 4s in column 4 circled in red" width="600" height="1333" loading="lazy"></div>
+  <figcaption>The hint's last stage: "Remove that digit from all other cells in those columns/rows."</figcaption>
+</figure>
+
+<h2>Finned X-Wing, Swordfish and Jellyfish</h2>
+<ul>
+  <li><strong>Finned X-Wing</strong>: almost an X-Wing, but one row has an extra candidate or two (the fin) in the same box as one of the corners. Eliminations are then limited to cells that also see the fin.</li>
+  <li><strong>Swordfish</strong>: three rows whose candidates for the digit lie in the same three columns. Each row needs only two or three of them.</li>
+  <li><strong>Jellyfish</strong>: the same with four rows and four columns.</li>
+</ul>
+<p>Smart Hint knows all of these, including the finned versions, and names the exact pattern it found.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+  <li><strong>A row with three candidates.</strong> Each of the two rows must have the digit in exactly two cells. A third candidate breaks the X-Wing (though it may make a Finned X-Wing or a Swordfish).</li>
+  <li><strong>Columns that don't match.</strong> Columns 3 and 8 in one row and 3 and 9 in the other is not an X-Wing.</li>
+  <li><strong>Eliminating in the wrong direction.</strong> Found in rows, eliminate in columns, and vice versa.</li>
+</ul>
+
+<h2>Practise it</h2>
+<p>X-Wings show up in harder puzzles, so try Intermediate and Expert levels. When stuck, open only the first hint stage: if it says X-Wing, find the rectangle yourself before revealing more. The <a href="/camerasudoku/guides/sudoku-solving-strategies.html">strategies guide</a> shows where X-Wing sits on the ladder from singles to chains.</p>
+
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>When do I need an X-Wing?</summary><p>In harder puzzles, after singles, pairs and pointing stop making progress. It is usually the first advanced technique players learn.</p></details>
+    <details><summary>Can an X-Wing be found in columns?</summary><p>Yes. If a digit fits in exactly two cells in each of two columns, and those cells share the same two rows, remove the digit from the rest of those rows.</p></details>
+    <details><summary>What is a Finned X-Wing?</summary><p>An almost-X-Wing with one or two extra candidates in the same box as a corner. Eliminations are limited to cells that also see the fin. Smart Hint detects finned fish too.</p></details>
+  </section>
+  <section class="related">
+    <h2>Related guides</h2>
+    <ul>
+      <li><a href="/camerasudoku/guides/scan-sudoku-with-camera.html">How to scan a Sudoku with your camera</a></li>
+      <li><a href="/camerasudoku/guides/sudoku-solving-strategies.html">Sudoku strategies explained</a></li>
+      <li><a href="/camerasudoku/guides/sudoku-solver-offline.html">Solve Sudoku offline</a></li>
+      <li><a href="/camerasudoku/guides/naked-pair-sudoku.html">Naked Pairs explained</a></li>
+    </ul>
+  </section>
+  <div class="cta-card">
+    <h2>Ready to try it?</h2>
+    <p>Camera Sudoku is free to install. Scan your first puzzle in seconds.</p>
+    <p><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.sudoku.camerasudoku&amp;referrer=utm_source%3Dcamerasudoku_site%26utm_medium%3Dorganic%26utm_campaign%3Dguide_x_wing_sudoku%26utm_content%3Den" rel="noopener"><img src="/camerasudoku/assets/badge-en.svg" alt="Get it on Google Play" width="186" height="55" loading="lazy"></a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="y">2026</span> Camera Sudoku · Northforce Apps</div>
+    <nav aria-label="Footer">
+      <a href="/camerasudoku/privacy.html">Privacy</a>
+      <a href="mailto:northforceapps@protonmail.com">Contact</a>
+      <a href="https://play.google.com/store/apps/details?id=com.sudoku.camerasudoku&amp;referrer=utm_source%3Dcamerasudoku_site%26utm_medium%3Dorganic%26utm_campaign%3Dguide_x_wing_sudoku%26utm_content%3Den" rel="noopener">Google Play</a>
+    </nav>
+  </div>
+  <div class="wrap foot-more">
+    <span class="foot-more-label">More from Northforce Apps</span>
+    <nav aria-label="Other Northforce Apps"><a href="https://northforceapps.com/cue-loop/">CueLoop</a><a href="https://northforceapps.com/gpslogger/">GPS Logger</a><a href="https://northforceapps.com/remotemic/">RemoteMic</a><a href="https://northforceapps.com/webcam/">WebCam</a></nav>
+  </div>
+</footer>
+<script src="/camerasudoku/app.js"></script>
+</body>
+</html>

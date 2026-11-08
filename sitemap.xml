@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://northforceapps.com/camerasudoku/guides/</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://northforceapps.com/camerasudoku/guides/"/>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://northforceapps.com/camerasudoku/guides/scan-sudoku-with-camera.html</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://northforceapps.com/camerasudoku/guides/scan-sudoku-with-camera.html"/>
@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>https://northforceapps.com/camerasudoku/guides/sudoku-solving-strategies.html</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://northforceapps.com/camerasudoku/guides/sudoku-solving-strategies.html"/>
@@ -42,10 +42,26 @@
   </url>
   <url>
     <loc>https://northforceapps.com/camerasudoku/guides/sudoku-solver-offline.html</loc>
-    <lastmod>2026-11-07</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://northforceapps.com/camerasudoku/guides/sudoku-solver-offline.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://northforceapps.com/camerasudoku/guides/sudoku-solver-offline.html"/>
+  </url>
+  <url>
+    <loc>https://northforceapps.com/camerasudoku/guides/naked-pair-sudoku.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://northforceapps.com/camerasudoku/guides/naked-pair-sudoku.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://northforceapps.com/camerasudoku/guides/naked-pair-sudoku.html"/>
+  </url>
+  <url>
+    <loc>https://northforceapps.com/camerasudoku/guides/x-wing-sudoku.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://northforceapps.com/camerasudoku/guides/x-wing-sudoku.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://northforceapps.com/camerasudoku/guides/x-wing-sudoku.html"/>
   </url>
 </urlset>

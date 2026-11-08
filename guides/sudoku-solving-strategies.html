@@ -62,7 +62,17 @@
   .doc .faq details p{margin-top:10px;color:var(--ink-soft)}
   .doc .related{margin-top:34px}
   .doc .related ul{list-style:none;margin-left:0}
-  .doc .related li{margin:8px 0}</style>
+  .doc .related li{margin:8px 0}
+  .doc figure{margin:26px auto;text-align:center}
+  .doc figure img,.doc figure video{display:block;margin:0 auto;height:auto;max-width:100%}
+  .doc figcaption{margin:12px auto 0;max-width:56ch;font-size:.93rem;color:var(--stone);line-height:1.5}
+  .doc .phone{width:min(280px,72vw);border-radius:30px;padding:9px;background:linear-gradient(155deg,#1a2a3a,#060b14);box-shadow:0 18px 44px rgba(8,12,23,.24);margin:0 auto}
+  .doc .phone img,.doc .phone video{width:100%;border-radius:22px;background:#060b14}
+  .doc .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;margin:26px 0;align-items:start}
+  .doc .shots figure{margin:0}
+  .doc .shots .phone{width:min(240px,72vw)}
+  .doc .tablet img{width:100%;border-radius:14px;border:1px solid rgba(10,18,33,.12);box-shadow:0 18px 44px rgba(8,12,23,.2)}
+  .doc .diagram svg{width:min(340px,86vw);height:auto;display:block;margin:0 auto}</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,7 +81,10 @@
   "headline": "Sudoku solving strategies, from singles to chains",
   "description": "A plain-language tour of the Sudoku techniques Camera Sudoku's Smart Hints teach: singles, pairs, pointing, X-Wing, Swordfish, wings, Unique Rectangles and chains.",
   "mainEntityOfPage": "https://northforceapps.com/camerasudoku/guides/sudoku-solving-strategies.html",
-  "image": "https://northforceapps.com/camerasudoku/assets/feature_graphic.png",
+  "image": [
+    "https://northforceapps.com/camerasudoku/assets/screens/04-smart-hint.jpg",
+    "https://northforceapps.com/camerasudoku/assets/feature_graphic.png"
+  ],
   "publisher": {
     "@type": "Organization",
     "name": "Northforce Apps"
@@ -129,41 +142,77 @@
   <h1>Sudoku solving strategies, from singles to chains</h1>
 <p>Sudoku is solved with a small set of logical techniques, applied from simplest to hardest. Camera Sudoku's <strong>Smart Hint</strong> always looks for the simplest step that works, shows it on your grid, and names the technique. Here is that ladder in plain language, so you know what each hint is teaching you.</p>
 
+<h2>How a Smart Hint unfolds</h2>
+<p>A hint does not jump straight to the answer. It opens in stages, and you can stop at any stage and finish the step yourself:</p>
+<ol>
+  <li><strong>Strategy</strong> names the technique, for example <em>Naked Pair</em>, and says what it means.</li>
+  <li><strong>Pattern</strong> highlights the cells that form it.</li>
+  <li><strong>Candidate Logic</strong> marks the candidates that make the pattern work.</li>
+  <li><strong>Eliminations</strong> circles what can be removed, or the digit that can be placed. <em>Remove candidates</em> then applies it for you.</li>
+</ol>
+<p>Hints work on candidates (pencil marks). If the board has none yet, the app offers to fill in the basic ones. Each stage you open lowers the maximum score a little more, so stopping early pays.</p>
+
+<figure>
+  <div class="phone"><video src="/camerasudoku/assets/clip-hint.mp4" poster="/camerasudoku/assets/clip-hint.jpg" width="540" height="1200" muted loop playsinline controls preload="none" data-autoplay aria-label="Screen recording: a Smart Hint walking through a Naked Pair"></video></div>
+  <figcaption>A Naked Pair hint on a scanned newspaper puzzle, stage by stage, recorded on a phone. The <a href="/camerasudoku/guides/naked-pair-sudoku.html">Naked Pair guide</a> explains this exact step.</figcaption>
+</figure>
+
 <h2>1. Singles: where most puzzles are won</h2>
 <ul>
-  <li><strong>Naked Single</strong> — a cell has only one possible candidate left. Place it.</li>
-  <li><strong>Hidden Single</strong> — a digit can go in only one cell of a row, column or box, even if that cell has other candidates.</li>
+  <li><strong>Naked Single</strong>: a cell has only one possible candidate left. Place it.</li>
+  <li><strong>Hidden Single</strong>: a digit can go in only one cell of a row, column or box, even if that cell has other candidates.</li>
 </ul>
-<p>Easy and medium puzzles fall to singles alone. Camera Sudoku can auto-fill singles for you once you have the hang of them.</p>
+<p>Easy and medium puzzles fall to singles alone. Once you have the hang of them, Camera Sudoku can auto-fill singles for you.</p>
 
 <h2>2. Pairs, triples and quads</h2>
-<p>When two cells in a unit share exactly the same two candidates (a <strong>Naked Pair</strong>), those digits must go in those cells, so you can remove them from every other cell of the unit. <strong>Hidden Pairs</strong> work the other way round: two digits that fit only in two cells claim those cells. The same idea scales to triples and quads.</p>
+<p>When two cells in a unit share exactly the same two candidates (a <strong>Naked Pair</strong>), those digits must go in those cells, so you can remove them from every other cell of the unit. <strong>Hidden Pairs</strong> work the other way round: two digits that fit only in two cells claim those cells. The same idea scales to triples and quads. <a href="/camerasudoku/guides/naked-pair-sudoku.html">Naked Pairs, step by step →</a></p>
 
 <h2>3. Pointing and claiming</h2>
-<p>If all candidates for a digit inside a box line up in one row or column, that digit can be removed from the rest of that row or column (<strong>pointing</strong>). The reverse, a row's candidates confined to one box, is <strong>claiming</strong> or box/line reduction.</p>
+<p>If all candidates for a digit inside a box line up in one row or column, that digit can be removed from the rest of that row or column (<strong>pointing</strong>). The reverse, a row's candidates confined to one box, is <strong>claiming</strong>, also called box/line reduction.</p>
 
 <h2>4. Fish: X-Wing, Swordfish, Jellyfish</h2>
-<p>An <strong>X-Wing</strong> is a digit that appears as a candidate in exactly two cells in each of two rows, and those cells share the same two columns. The four corners form a rectangle, and the digit can be removed from the rest of those columns. <strong>Swordfish</strong> (three rows) and <strong>Jellyfish</strong> (four) are bigger versions. <em>Finned</em> fish allow one extra candidate near a corner.</p>
+<p>An <strong>X-Wing</strong> is a digit that appears as a candidate in exactly two cells in each of two rows, and those cells share the same two columns. The four corners form a rectangle, and the digit can be removed from the rest of those columns. <strong>Swordfish</strong> (three rows) and <strong>Jellyfish</strong> (four) are bigger versions. <em>Finned</em> fish allow one extra candidate near a corner. <a href="/camerasudoku/guides/x-wing-sudoku.html">X-Wing, explained with an example →</a></p>
+
+<figure>
+  <div class="phone"><img src="/camerasudoku/assets/screens/04-smart-hint.jpg" alt="Smart Hint showing an X-Wing on digit 4, with the four corners marked and two eliminations circled" width="600" height="1333" loading="lazy"></div>
+  <figcaption>An X-Wing on digit 4: four corners in rows 6 and 9, and the two 4s it removes from column 4 circled in red.</figcaption>
+</figure>
 
 <h2>5. Wings and short patterns</h2>
 <ul>
-  <li><strong>Y-Wing</strong>, <strong>XYZ-Wing</strong> and <strong>WXYZ-Wing</strong> — a pivot cell and two or three "pincers" that together force a digit out of the cells they all see.</li>
-  <li><strong>Skyscraper</strong> and <strong>Two-String Kite</strong> — two strong links on one digit joined at one end.</li>
-  <li><strong>Simple Colouring</strong> — follow a chain of strong links on one digit, alternating two colours, to find a contradiction.</li>
+  <li><strong>Y-Wing</strong>, <strong>XYZ-Wing</strong> and <strong>WXYZ-Wing</strong>: a pivot cell and two or three "pincers" that together force a digit out of the cells they all see.</li>
+  <li><strong>Skyscraper</strong> and <strong>Two-String Kite</strong>: two strong links on one digit, joined at one end.</li>
+  <li><strong>Simple Colouring</strong>: follow a chain of strong links on one digit, alternating two colours, to find a contradiction.</li>
 </ul>
 
 <h2>6. Unique Rectangles</h2>
-<p>A proper Sudoku has one solution. Four cells in two rows, two columns and two boxes cannot all end up holding the same two digits, because the digits could then swap. <strong>Unique Rectangle</strong> hints use that rule to remove the candidate that would create the deadly pattern.</p>
+<p>A proper Sudoku has one solution. Four cells in two rows, two columns and two boxes cannot all end up holding the same two digits, because the digits could then swap. <strong>Unique Rectangle</strong> hints use that rule to remove the candidate that would create this "deadly pattern".</p>
 
 <h2>7. Chains</h2>
 <p>When nothing simpler works, Smart Hint builds a chain of alternating strong and weak links (<strong>X-Chains</strong>, <strong>XY-Chains</strong> and general <strong>Alternating Inference Chains</strong>) and draws it on the board, so you can follow the logic link by link.</p>
 
+<figure class="tablet">
+  <img src="/camerasudoku/assets/screens/t01-hint-tablet.jpg" alt="Tablet in landscape: an AIC chain drawn across the Sudoku board with the hint panel beside it" width="1280" height="800" loading="lazy">
+  <figcaption>An AIC chain on a tablet. In landscape, the keypad and hint panel sit beside the board.</figcaption>
+</figure>
+
 <h2>How to practise</h2>
 <ol>
-  <li>Play a puzzle one level harder than feels comfortable.</li>
-  <li>When stuck, tap Smart Hint and read the technique name before you look at the answer.</li>
-  <li>Try to spot the same pattern yourself on the next puzzle before asking again.</li>
+  <li>Play a puzzle one level harder than feels comfortable. Every built-in puzzle is rated by the techniques it needs, from Beginner to Expert.</li>
+  <li>When stuck, open only the first hint stage and read the technique name. Then look for the pattern yourself.</li>
+  <li>Try to spot the same pattern on the next puzzle before asking again.</li>
 </ol>
+
+<div class="shots">
+  <figure>
+    <div class="phone"><img src="/camerasudoku/assets/screens/06-level-select.jpg" alt="Rated Puzzles screen with Beginner, Easy, Intermediate and Expert levels and progress bars" width="600" height="1333" loading="lazy"></div>
+    <figcaption>Rated Puzzles: 100 puzzles per level, rated by the techniques they need.</figcaption>
+  </figure>
+  <figure>
+    <div class="phone"><img src="/camerasudoku/assets/screens/10-complete-stars.jpg" alt="Puzzle Completed celebration with fireworks over a dark-theme board" width="600" height="1333" loading="lazy"></div>
+    <figcaption>Finish without help for the best score.</figcaption>
+  </figure>
+</div>
 <p>Hints lower your score multiplier, so solving unaided scores more. The Sudoku King trophy goes to a perfect solve with no mistakes, hints or checks.</p>
 
   <section class="faq">
@@ -177,6 +226,8 @@
     <ul>
       <li><a href="/camerasudoku/guides/scan-sudoku-with-camera.html">How to scan a Sudoku with your camera</a></li>
       <li><a href="/camerasudoku/guides/sudoku-solver-offline.html">Solve Sudoku offline</a></li>
+      <li><a href="/camerasudoku/guides/naked-pair-sudoku.html">Naked Pairs explained</a></li>
+      <li><a href="/camerasudoku/guides/x-wing-sudoku.html">X-Wing explained</a></li>
     </ul>
   </section>
   <div class="cta-card">

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7WZWQ9PQ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Y7WZWQ9PQ7');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Naked Pair in Sudoku: how to spot it and use it — Camera Sudoku</title>
+<meta name="description" content="What a Naked Pair is, why it works and how to find one, with a real example from a scanned newspaper Sudoku. Plus Naked Triples, Quads and Hidden Pairs.">
+<link rel="canonical" href="https://northforceapps.com/camerasudoku/guides/naked-pair-sudoku.html">
+<meta name="theme-color" content="#0458a1">
+<meta name="keywords" content="naked pair sudoku, sudoku naked pair, naked pairs, naked triple sudoku, sudoku pair strategy, hidden pair vs naked pair">
+<link rel="alternate" hreflang="en" href="https://northforceapps.com/camerasudoku/guides/naked-pair-sudoku.html">
+<link rel="alternate" hreflang="x-default" href="https://northforceapps.com/camerasudoku/guides/naked-pair-sudoku.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Camera Sudoku">
+<meta property="og:locale" content="en">
+<meta property="og:title" content="Naked Pair in Sudoku: how to spot it and use it">
+<meta property="og:description" content="What a Naked Pair is, why it works and how to find one, with a real example from a scanned newspaper Sudoku. Plus Naked Triples, Quads and Hidden Pairs.">
+<meta property="og:url" content="https://northforceapps.com/camerasudoku/guides/naked-pair-sudoku.html">
+<meta property="og:image" content="https://northforceapps.com/camerasudoku/assets/feature_graphic.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Naked Pair in Sudoku: how to spot it and use it">
+<meta name="twitter:description" content="What a Naked Pair is, why it works and how to find one, with a real example from a scanned newspaper Sudoku. Plus Naked Triples, Quads and Hidden Pairs.">
+<meta name="twitter:image" content="https://northforceapps.com/camerasudoku/assets/feature_graphic.png">
+<link rel="icon" href="/camerasudoku/assets/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="/camerasudoku/assets/icon.png">
+<link rel="manifest" href="/camerasudoku/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/camerasudoku/styles.css">
+<style>.doc{max-width:780px;margin:0 auto;padding:40px 24px 80px}
+  .doc h1{font-family:var(--serif);font-size:2.4rem;color:var(--teal-deep);margin-bottom:6px}
+  .doc h2{font-family:var(--serif);font-size:1.4rem;color:var(--ink);margin:30px 0 8px}
+  .doc p,.doc li{color:var(--ink-soft);margin:8px 0}
+  .doc ul{margin-left:20px}
+  .doc .eff{color:var(--stone);font-size:.95rem}
+  .doc .lede{margin-top:18px}
+  .doc .cta-card{margin-top:36px;padding:22px;border-radius:18px;background:var(--paper);border:1px solid rgba(10,18,33,.08)}
+  .doc h3{font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin:20px 0 6px}
+  .doc table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.95rem;display:block;overflow-x:auto}
+  .doc th,.doc td{border:1px solid rgba(10,18,33,.12);padding:8px 10px;text-align:left;vertical-align:top;color:var(--ink-soft)}
+  .doc th{background:var(--paper);color:var(--ink)}
+  .doc code{font-size:.9em;background:var(--paper);padding:1px 4px;border-radius:4px}
+  .guide-hero{width:100%;height:auto;border-radius:18px;margin:18px 0 8px;display:block}
+  .doc h3{font-family:var(--serif);font-size:1.15rem;color:var(--teal-deep);margin:22px 0 6px}
+  .doc ol,.doc ul{margin-left:20px}
+  .doc ol li,.doc ul li{margin:6px 0}
+  .doc .faq{margin-top:34px}
+  .doc .faq h2{margin-bottom:12px}
+  .doc .faq details{background:var(--paper);border:1px solid rgba(10,18,33,.08);border-radius:14px;padding:18px 22px;margin-bottom:12px}
+  .doc .faq summary{font-weight:700;color:var(--ink);cursor:pointer;font-size:1.05rem;list-style:none}
+  .doc .faq summary::-webkit-details-marker{display:none}
+  .doc .faq details p{margin-top:10px;color:var(--ink-soft)}
+  .doc .related{margin-top:34px}
+  .doc .related ul{list-style:none;margin-left:0}
+  .doc .related li{margin:8px 0}
+  .doc figure{margin:26px auto;text-align:center}
+  .doc figure img,.doc figure video{display:block;margin:0 auto;height:auto;max-width:100%}
+  .doc figcaption{margin:12px auto 0;max-width:56ch;font-size:.93rem;color:var(--stone);line-height:1.5}
+  .doc .phone{width:min(280px,72vw);border-radius:30px;padding:9px;background:linear-gradient(155deg,#1a2a3a,#060b14);box-shadow:0 18px 44px rgba(8,12,23,.24);margin:0 auto}
+  .doc .phone img,.doc .phone video{width:100%;border-radius:22px;background:#060b14}
+  .doc .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;margin:26px 0;align-items:start}
+  .doc .shots figure{margin:0}
+  .doc .shots .phone{width:min(240px,72vw)}
+  .doc .tablet img{width:100%;border-radius:14px;border:1px solid rgba(10,18,33,.12);box-shadow:0 18px 44px rgba(8,12,23,.2)}
+  .doc .diagram svg{width:min(340px,86vw);height:auto;display:block;margin:0 auto}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "inLanguage": "en",
+  "headline": "Naked Pair in Sudoku: how to spot it and use it",
+  "description": "What a Naked Pair is, why it works and how to find one, with a real example from a scanned newspaper Sudoku. Plus Naked Triples, Quads and Hidden Pairs.",
+  "mainEntityOfPage": "https://northforceapps.com/camerasudoku/guides/naked-pair-sudoku.html",
+  "image": [
+    "https://northforceapps.com/camerasudoku/assets/screens/np-pattern.jpg",
+    "https://northforceapps.com/camerasudoku/assets/feature_graphic.png"
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Northforce Apps"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does a Naked Pair have to be in a box?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It works in any row, column or box. If the two cells share both a row and a box, you can eliminate the digits from both."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a Naked Pair and a Hidden Pair?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Naked Pair is two cells with only the same two candidates; you remove those digits from the rest of the unit. A Hidden Pair is two digits that fit in only two cells of a unit; you remove the other candidates from those two cells."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need pencil marks to find Naked Pairs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, pairs are only visible in candidates. Camera Sudoku can fill in the basic candidates for you and keep them updated as you place digits."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "inLanguage": "en",
+  "name": "Naked Pair in Sudoku: how to spot it and use it",
+  "description": "What a Naked Pair is, why it works and how to find one, with a real example from a scanned newspaper Sudoku. Plus Naked Triples, Quads and Hidden Pairs.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Fill in candidates",
+      "text": "Mark every possible digit in each empty cell, or let Camera Sudoku fill the basic candidates."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Find two-candidate cells",
+      "text": "In one row, column or box, look for cells that have exactly two candidates."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Match a pair",
+      "text": "Find two cells in the same unit with the same two candidates, such as 3 and 5 in both."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Eliminate",
+      "text": "Remove both digits from every other cell in that row, column or box."
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/camerasudoku/"><img src="/camerasudoku/assets/icon.png" alt="Camera Sudoku icon">Camera Sudoku</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="nav-sec" href="/camerasudoku/#features">Features</a>
+      <a class="nav-sec" href="/camerasudoku/#how">How it works</a>
+      <a href="/camerasudoku/guides/">Guides</a>
+      
+    </nav>
+  </div>
+</header>
+<main class="doc">
+  <p class="eff"><a href="/camerasudoku/guides/">← All guides</a></p>
+  <h1>Naked Pair in Sudoku: how to spot it and use it</h1>
+<p>A <strong>Naked Pair</strong> in Sudoku is two cells in the same row, column or box that both have exactly the same two candidates, for example 3 and 5. One of those cells must be 3 and the other 5, so neither digit can go anywhere else in that row, column or box, and you can remove both from every other cell there. It is usually the first technique you need after singles.</p>
+
+<figure>
+  <div class="phone"><video src="/camerasudoku/assets/clip-hint.mp4" poster="/camerasudoku/assets/clip-hint.jpg" width="540" height="1200" muted loop playsinline controls preload="none" data-autoplay aria-label="Screen recording: Camera Sudoku's Smart Hint finding a Naked Pair on 3 and 5 in row 6"></video></div>
+  <figcaption>A Smart Hint finding a Naked Pair on a scanned newspaper puzzle, recorded on a phone: candidates are filled in, the hint opens stage by stage, and the eliminations are applied.</figcaption>
+</figure>
+
+<h2>Why a Naked Pair works</h2>
+<p>Take two cells in row 6 whose only candidates are 3 and 5. Whatever the solution is, one of them holds the 3 and the other the 5; there is no third option. Row 6 needs exactly one 3 and one 5, and these two cells use them up. Any other 3 or 5 in row 6 would be a second copy, so those candidates are false and can be crossed out.</p>
+<p>The same holds in a column or a box. If the two cells share both a row and a box, you can eliminate from both.</p>
+
+<h2>How to find a Naked Pair</h2>
+<ol>
+  <li><strong>Fill in candidates.</strong> You can't see pairs without pencil marks. Camera Sudoku can fill the basic candidates for you.</li>
+  <li><strong>Look for cells with exactly two candidates.</strong> Scan one row, column or box at a time.</li>
+  <li><strong>Find two identical ones in the same unit.</strong> {3,5} and {3,5} is a pair; {3,5} and {3,7} is not.</li>
+  <li><strong>Eliminate.</strong> Remove both digits from every other cell in that unit. Leave the pair itself alone.</li>
+</ol>
+
+<h2>The example, stage by stage</h2>
+<p>In the recording, the puzzle is the newspaper Sudoku scanned in the <a href="/camerasudoku/guides/scan-sudoku-with-camera.html">scanning guide</a>. In row 6, the first and seventh cells are the only ones with just 3 and 5 as candidates. Smart Hint highlights those two cells first, then marks the 3 and 5 inside them.</p>
+
+<div class="shots">
+  <figure>
+    <div class="phone"><img src="/camerasudoku/assets/screens/np-pattern.jpg" alt="Row 6 with two cells highlighted, both holding only the candidates 3 and 5" width="600" height="1333" loading="lazy"></div>
+    <figcaption>Pattern: two cells in row 6 hold only 3 and 5.</figcaption>
+  </figure>
+  <figure>
+    <div class="phone"><img src="/camerasudoku/assets/screens/np-eliminations.jpg" alt="The other cells of row 6 with their 3 and 5 candidates circled in red for removal" width="600" height="1333" loading="lazy"></div>
+    <figcaption>Eliminations: every other 3 and 5 in row 6 is circled.</figcaption>
+  </figure>
+</div>
+
+<p>Four cells lose candidates: two drop from {1,3,5,8} to {1,8}, and two from {2,3,4,5} to {2,4}. Notice what that leaves: two new Naked Pairs in the same row, {1,8} and {2,4}. One elimination often sets up the next.</p>
+
+<h2>Naked Triples and Quads</h2>
+<p>The idea scales. A <strong>Naked Triple</strong> is three cells in one unit whose candidates, taken together, are only three digits. Each cell doesn't need all three: {1,2}, {2,3} and {1,3} is a valid triple, because those three cells must hold 1, 2 and 3 between them. Remove those digits from the rest of the unit. A <strong>Naked Quad</strong> is the same with four cells and four digits.</p>
+
+<h2>Naked Pair vs Hidden Pair</h2>
+<p>A Naked Pair is two cells with nothing but the same two candidates. A <strong>Hidden Pair</strong> is two digits that can go in only two cells of a unit, even though those cells have other candidates too. In a Hidden Pair the two digits claim the cells, so you remove the <em>other</em> candidates from those two cells. Smart Hint finds both, and names which one it is.</p>
+
+<h2>Using Smart Hint for pairs</h2>
+<p>Tap <em>Hint</em> when you are stuck. The first stage only names the technique, which is often enough: once you know to look for a Naked Pair, finding it yourself is good practice. Each further stage costs a little more score. At the last stage, <em>Remove candidates</em> applies the eliminations at no extra cost.</p>
+
+<div class="shots">
+  <figure>
+    <div class="phone"><img src="/camerasudoku/assets/screens/np-candidates.jpg" alt="Candidates Required dialog offering to fill in basic candidates automatically" width="600" height="1333" loading="lazy"></div>
+    <figcaption>No pencil marks yet? The app offers to fill in the basic candidates.</figcaption>
+  </figure>
+  <figure>
+    <div class="phone"><img src="/camerasudoku/assets/screens/np-strategy.jpg" alt="Smart Hint panel reading Strategy: Naked Pair, before any cells are highlighted" width="600" height="1333" loading="lazy"></div>
+    <figcaption>The first stage only names the technique. The rest is up to you.</figcaption>
+  </figure>
+</div>
+
+<h2>Common mistakes</h2>
+<ul>
+  <li><strong>The cells aren't in the same unit.</strong> Two {3,5} cells in different rows, columns and boxes tell you nothing.</li>
+  <li><strong>One cell has a third candidate.</strong> {3,5} and {3,5,8} is not a Naked Pair, although it might be part of a triple.</li>
+  <li><strong>Missing pencil marks.</strong> If you skipped a candidate when marking by hand, you can see a "pair" that isn't one. Automatic candidates avoid that.</li>
+</ul>
+
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>Does a Naked Pair have to be in a box?</summary><p>No. It works in any row, column or box. If the two cells share both a row and a box, you can eliminate the digits from both.</p></details>
+    <details><summary>What is the difference between a Naked Pair and a Hidden Pair?</summary><p>A Naked Pair is two cells with only the same two candidates; you remove those digits from the rest of the unit. A Hidden Pair is two digits that fit in only two cells of a unit; you remove the other candidates from those two cells.</p></details>
+    <details><summary>Do I need pencil marks to find Naked Pairs?</summary><p>Yes, pairs are only visible in candidates. Camera Sudoku can fill in the basic candidates for you and keep them updated as you place digits.</p></details>
+  </section>
+  <section class="related">
+    <h2>Related guides</h2>
+    <ul>
+      <li><a href="/camerasudoku/guides/scan-sudoku-with-camera.html">How to scan a Sudoku with your camera</a></li>
+      <li><a href="/camerasudoku/guides/sudoku-solving-strategies.html">Sudoku strategies explained</a></li>
+      <li><a href="/camerasudoku/guides/sudoku-solver-offline.html">Solve Sudoku offline</a></li>
+      <li><a href="/camerasudoku/guides/x-wing-sudoku.html">X-Wing explained</a></li>
+    </ul>
+  </section>
+  <div class="cta-card">
+    <h2>Ready to try it?</h2>
+    <p>Camera Sudoku is free to install. Scan your first puzzle in seconds.</p>
+    <p><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.sudoku.camerasudoku&amp;referrer=utm_source%3Dcamerasudoku_site%26utm_medium%3Dorganic%26utm_campaign%3Dguide_naked_pair_sudoku%26utm_content%3Den" rel="noopener"><img src="/camerasudoku/assets/badge-en.svg" alt="Get it on Google Play" width="186" height="55" loading="lazy"></a></p>
+  </div>
+</main>
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="y">2026</span> Camera Sudoku · Northforce Apps</div>
+    <nav aria-label="Footer">
+      <a href="/camerasudoku/privacy.html">Privacy</a>
+      <a href="mailto:northforceapps@protonmail.com">Contact</a>
+      <a href="https://play.google.com/store/apps/details?id=com.sudoku.camerasudoku&amp;referrer=utm_source%3Dcamerasudoku_site%26utm_medium%3Dorganic%26utm_campaign%3Dguide_naked_pair_sudoku%26utm_content%3Den" rel="noopener">Google Play</a>
+    </nav>
+  </div>
+  <div class="wrap foot-more">
+    <span class="foot-more-label">More from Northforce Apps</span>
+    <nav aria-label="Other Northforce Apps"><a href="https://northforceapps.com/cue-loop/">CueLoop</a><a href="https://northforceapps.com/gpslogger/">GPS Logger</a><a href="https://northforceapps.com/remotemic/">RemoteMic</a><a href="https://northforceapps.com/webcam/">WebCam</a></nav>
+  </div>
+</footer>
+<script src="/camerasudoku/app.js"></script>
+</body>
+</html>

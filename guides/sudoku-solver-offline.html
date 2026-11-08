@@ -62,7 +62,17 @@
   .doc .faq details p{margin-top:10px;color:var(--ink-soft)}
   .doc .related{margin-top:34px}
   .doc .related ul{list-style:none;margin-left:0}
-  .doc .related li{margin:8px 0}</style>
+  .doc .related li{margin:8px 0}
+  .doc figure{margin:26px auto;text-align:center}
+  .doc figure img,.doc figure video{display:block;margin:0 auto;height:auto;max-width:100%}
+  .doc figcaption{margin:12px auto 0;max-width:56ch;font-size:.93rem;color:var(--stone);line-height:1.5}
+  .doc .phone{width:min(280px,72vw);border-radius:30px;padding:9px;background:linear-gradient(155deg,#1a2a3a,#060b14);box-shadow:0 18px 44px rgba(8,12,23,.24);margin:0 auto}
+  .doc .phone img,.doc .phone video{width:100%;border-radius:22px;background:#060b14}
+  .doc .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;margin:26px 0;align-items:start}
+  .doc .shots figure{margin:0}
+  .doc .shots .phone{width:min(240px,72vw)}
+  .doc .tablet img{width:100%;border-radius:14px;border:1px solid rgba(10,18,33,.12);box-shadow:0 18px 44px rgba(8,12,23,.2)}
+  .doc .diagram svg{width:min(340px,86vw);height:auto;display:block;margin:0 auto}</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,7 +81,10 @@
   "headline": "A Sudoku solver that works offline",
   "description": "Solve and learn Sudoku without an internet connection. What works offline in Camera Sudoku, and what needs a connection.",
   "mainEntityOfPage": "https://northforceapps.com/camerasudoku/guides/sudoku-solver-offline.html",
-  "image": "https://northforceapps.com/camerasudoku/assets/feature_graphic.png",
+  "image": [
+    "https://northforceapps.com/camerasudoku/assets/screens/07-my-puzzles.jpg",
+    "https://northforceapps.com/camerasudoku/assets/feature_graphic.png"
+  ],
   "publisher": {
     "@type": "Organization",
     "name": "Northforce Apps"
@@ -139,6 +152,17 @@
   <li><strong>Import and export</strong> by copying and pasting puzzle text.</li>
 </ul>
 
+<div class="shots">
+  <figure>
+    <div class="phone"><img src="/camerasudoku/assets/screens/06-level-select.jpg" alt="Rated Puzzles screen with four difficulty levels" width="600" height="1333" loading="lazy"></div>
+    <figcaption>400 rated puzzles from Beginner to Expert, all stored in the app.</figcaption>
+  </figure>
+  <figure>
+    <div class="phone"><img src="/camerasudoku/assets/screens/07-my-puzzles.jpg" alt="My Puzzles: a grid of saved puzzles with names and star ratings" width="600" height="1333" loading="lazy"></div>
+    <figcaption>My Puzzles keeps everything you scan, import or generate, sortable by name or score.</figcaption>
+  </figure>
+</div>
+
 <h2>What needs a connection</h2>
 <ul>
   <li><strong>Ads</strong> in the free version. Without a connection, no ads load.</li>
@@ -150,9 +174,14 @@
 <h2>Getting ready for a trip</h2>
 <ol>
   <li>Install Camera Sudoku and open it once while online.</li>
-  <li>Scan a few puzzles from the book you are bringing, or generate some, so they are waiting in My Puzzles.</li>
+  <li>Scan a few puzzles from the book you are bringing, or generate some, so they are waiting in My Puzzles. See <a href="/camerasudoku/guides/scan-sudoku-with-camera.html">how to scan a Sudoku</a>.</li>
   <li>For a long trip, pick harder levels and try to solve them without hints.</li>
 </ol>
+
+<figure class="tablet">
+  <img src="/camerasudoku/assets/screens/t02-play-tablet.jpg" alt="Camera Sudoku on a tablet in landscape with a dark theme" width="1280" height="800" loading="lazy">
+  <figcaption>On a tablet, landscape puts the keypad beside the board. Dark themes are easier on the eyes on a night flight.</figcaption>
+</figure>
 
 <h2>No account, no cloud</h2>
 <p>There is no sign-in. Your puzzles and progress live on your phone, which is also why they work offline. If you change phones, Android's own device backup can carry the app's data across, if you have it turned on.</p>
@@ -168,6 +197,8 @@
     <ul>
       <li><a href="/camerasudoku/guides/scan-sudoku-with-camera.html">How to scan a Sudoku with your camera</a></li>
       <li><a href="/camerasudoku/guides/sudoku-solving-strategies.html">Sudoku strategies explained</a></li>
+      <li><a href="/camerasudoku/guides/naked-pair-sudoku.html">Naked Pairs explained</a></li>
+      <li><a href="/camerasudoku/guides/x-wing-sudoku.html">X-Wing explained</a></li>
     </ul>
   </section>
   <div class="cta-card">

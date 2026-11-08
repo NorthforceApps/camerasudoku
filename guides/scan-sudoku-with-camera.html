@@ -62,7 +62,17 @@
   .doc .faq details p{margin-top:10px;color:var(--ink-soft)}
   .doc .related{margin-top:34px}
   .doc .related ul{list-style:none;margin-left:0}
-  .doc .related li{margin:8px 0}</style>
+  .doc .related li{margin:8px 0}
+  .doc figure{margin:26px auto;text-align:center}
+  .doc figure img,.doc figure video{display:block;margin:0 auto;height:auto;max-width:100%}
+  .doc figcaption{margin:12px auto 0;max-width:56ch;font-size:.93rem;color:var(--stone);line-height:1.5}
+  .doc .phone{width:min(280px,72vw);border-radius:30px;padding:9px;background:linear-gradient(155deg,#1a2a3a,#060b14);box-shadow:0 18px 44px rgba(8,12,23,.24);margin:0 auto}
+  .doc .phone img,.doc .phone video{width:100%;border-radius:22px;background:#060b14}
+  .doc .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;margin:26px 0;align-items:start}
+  .doc .shots figure{margin:0}
+  .doc .shots .phone{width:min(240px,72vw)}
+  .doc .tablet img{width:100%;border-radius:14px;border:1px solid rgba(10,18,33,.12);box-shadow:0 18px 44px rgba(8,12,23,.2)}
+  .doc .diagram svg{width:min(340px,86vw);height:auto;display:block;margin:0 auto}</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,7 +81,10 @@
   "headline": "How to scan a Sudoku with your phone camera",
   "description": "Turn a newspaper or puzzle-book Sudoku into a digital puzzle with your Android camera. Tips for framing, lighting, handwriting and tricky photos.",
   "mainEntityOfPage": "https://northforceapps.com/camerasudoku/guides/scan-sudoku-with-camera.html",
-  "image": "https://northforceapps.com/camerasudoku/assets/feature_graphic.png",
+  "image": [
+    "https://northforceapps.com/camerasudoku/assets/screens/02-camera-scan.jpg",
+    "https://northforceapps.com/camerasudoku/assets/feature_graphic.png"
+  ],
   "publisher": {
     "@type": "Organization",
     "name": "Northforce Apps"
@@ -122,7 +135,7 @@
     {
       "@type": "HowToStep",
       "name": "Open the camera",
-      "text": "Open Camera Sudoku and tap the camera button on the home screen. Allow camera access the first time."
+      "text": "Open Camera Sudoku and tap Capture on the home screen. Allow camera access the first time."
     },
     {
       "@type": "HowToStep",
@@ -132,7 +145,7 @@
     {
       "@type": "HowToStep",
       "name": "Capture and check",
-      "text": "Capture, then review the digits in Edit mode. Fix any misread digit and save the puzzle to My Puzzles."
+      "text": "Capture, then review the digits in Edit mode. Fix any misread digit, tap Accept and name the puzzle to save it to My Puzzles."
     }
   ]
 }
@@ -153,41 +166,66 @@
 <main class="doc">
   <p class="eff"><a href="/camerasudoku/guides/">← All guides</a></p>
   <h1>How to scan a Sudoku with your phone camera</h1>
-<p>To scan a Sudoku with your phone, open <strong>Camera Sudoku</strong>, point the camera at the 9×9 grid until the frame turns green, and capture it. The app finds the grid, reads the digits on your phone, and shows them in Edit mode so you can check them before you play. It works for newspaper puzzles, puzzle books and grids you have already started by hand.</p>
+<p>To scan a Sudoku with your phone, open <strong>Camera Sudoku</strong>, tap <strong>Capture</strong>, point the camera at the 9×9 grid until the frame turns green, and take the picture. The app finds the grid, reads the digits on your phone, and shows them in Edit mode so you can check them before you play. It works for newspaper puzzles, puzzle books and grids you have already started by hand.</p>
+
+<figure>
+  <div class="phone"><video src="/camerasudoku/assets/clip-scan.mp4" poster="/camerasudoku/assets/clip-scan.jpg" width="540" height="1200" muted loop playsinline controls preload="none" data-autoplay aria-label="Screen recording: scanning a newspaper Sudoku with Camera Sudoku"></video></div>
+  <figcaption>A real scan: the frame turns from red to green, the app reads the digits, and the puzzle opens in Edit mode. The processing step is sped up in this recording.</figcaption>
+</figure>
 
 <h2>What you need</h2>
 <ul>
   <li>An Android phone with a camera (Android 7.0 or newer).</li>
   <li>A printed Sudoku: newspaper, magazine, puzzle book or a printout.</li>
-  <li>Reasonable light. Daylight or a ceiling light is better than a single lamp at an angle.</li>
+  <li>Reasonable light. Even, diffuse light is better than a single lamp at an angle.</li>
 </ul>
 
 <h2>Step by step</h2>
 <ol>
-  <li><strong>Open the camera.</strong> On the home screen, tap the camera button. Allow camera access the first time.</li>
+  <li><strong>Open the camera.</strong> On the home screen, tap <em>Capture</em>. Allow camera access the first time.</li>
   <li><strong>Frame the whole grid.</strong> Hold the phone flat above the page so all four corners of the grid are in view. Fill as much of the frame as you can without cutting off an edge.</li>
-  <li><strong>Wait for green.</strong> The framing rectangle turns from red to green when the grid is aligned. Capture it then.</li>
-  <li><strong>Check the digits.</strong> The puzzle opens in Edit mode. Use the keypad to fix any digit the camera misread, and make sure the original puzzle digits are marked as givens.</li>
-  <li><strong>Save and play.</strong> Only puzzles with a single valid solution can be saved. Give it a name; it lands in <em>My Puzzles</em>.</li>
+  <li><strong>Wait for green.</strong> The framing rectangle turns from red to green when the grid is aligned. Tap the shutter then.</li>
+  <li><strong>Check the digits.</strong> The puzzle opens in Edit mode. Use the keypad to fix any digit the camera misread. The <em>Puzzle digit</em> and <em>User digit</em> buttons set whether a digit belongs to the original puzzle or was written in by you.</li>
+  <li><strong>Save and play.</strong> Tap <em>Accept</em> and give the puzzle a name. Only puzzles with a single valid solution can be saved. It lands in <em>My Puzzles</em>, and you can rename, reset or delete it later.</li>
 </ol>
+
+<div class="shots">
+  <figure>
+    <div class="phone"><img src="/camerasudoku/assets/screens/02-camera-scan.jpg" alt="Camera Sudoku camera screen with a green frame around a newspaper Sudoku" width="600" height="1333" loading="lazy"></div>
+    <figcaption>Green frame: the grid is aligned and ready to capture.</figcaption>
+  </figure>
+  <figure>
+    <div class="phone"><img src="/camerasudoku/assets/screens/03-edit-review.jpg" alt="Edit mode after a scan, with printed digits in black and handwritten digits in blue" width="600" height="1333" loading="lazy"></div>
+    <figcaption>Edit mode: printed digits in black, handwritten ones in blue. Fix anything misread, then Accept.</figcaption>
+  </figure>
+</div>
 
 <h2>Tips for a clean scan</h2>
 <ul>
   <li><strong>Flatten the page.</strong> A curled book page bends the grid lines. Press it flat or scan the inner page with the spine held down.</li>
-  <li><strong>Avoid glare and shadows.</strong> Glossy magazine paper reflects lamps; tilt the page slightly. Your own hand or phone can cast a shadow across one corner.</li>
+  <li><strong>Avoid glare and shadows.</strong> Glossy magazine paper reflects lamps, so tilt the page slightly. Your own hand or phone can cast a shadow across one corner.</li>
+  <li><strong>Adjust the light.</strong> In a dim room, switch on <em>Torch</em> at the top of the camera screen. If the page looks washed out or too dark, drag the <em>Exposure</em> slider.</li>
   <li><strong>Hold steady.</strong> Rest your elbows on the table for a second while you capture.</li>
-  <li><strong>Turn on the light.</strong> In a dim room, use the torch button on the camera screen.</li>
 </ul>
 
 <h2>Handwritten and half-finished puzzles</h2>
-<p>If you already started the puzzle in pen or pencil, scan it anyway. Camera Sudoku reads handwritten digits as well as printed ones and shows them in a different style, so you can continue where you left off. Messy handwriting can be misread more often than print, so take an extra look in Edit mode. With Pro, the app can also auto-correct handwritten entries that conflict with the rules.</p>
+<p>If you already started the puzzle in pen or pencil, scan it anyway. Camera Sudoku reads handwritten digits as well as printed ones and shows them in a different style, so you can continue where you left off. Messy handwriting is misread more often than print, so take an extra look in Edit mode. With Pro, the app can also auto-correct handwritten entries that conflict with the rules.</p>
 
 <h2>When the grid isn't detected</h2>
-<p>Most failed scans come from a cut-off corner, strong glare, or a grid that fills too little of the picture. Fix those first. If the grid still isn't found, switch the camera screen to <strong>manual mode</strong>: capture the photo, then drag the four corners onto the grid's corners and tap OK. The rest works the same.</p>
+<p>Most failed scans come from a cut-off corner, strong glare, or a grid that fills too little of the picture. Fix those first. If the grid still isn't found, switch the camera screen from <strong>Auto</strong> to <strong>Manual</strong>: take the photo, drag the four corners onto the grid's corners and tap OK. The rest works the same.</p>
+
+<figure>
+  <div class="phone"><img src="/camerasudoku/assets/screens/09-manual-corners.jpg" alt="Manual boundary screen: four draggable corners placed on a Sudoku grid" width="600" height="1333" loading="lazy"></div>
+  <figcaption>Manual mode: drag the corners to match the grid, then tap OK.</figcaption>
+</figure>
+
 <p>If a particular puzzle keeps failing, the <em>Report bug</em> button on the Info screen can attach that photo to an email draft for us. Nothing is sent unless you press send in your email app.</p>
 
 <h2>Is my photo uploaded?</h2>
 <p>No. Grid detection and digit recognition run entirely on your phone, and a normal scan keeps only the digits, not the photo. See the <a href="/camerasudoku/privacy.html">privacy policy</a> for details.</p>
+
+<h2>After the scan</h2>
+<p>Your puzzle is ready to play. When you get stuck, Smart Hint explains the next logical step on the grid. The <a href="/camerasudoku/guides/sudoku-solving-strategies.html">strategies guide</a> walks through the techniques it teaches, and the <a href="/camerasudoku/guides/naked-pair-sudoku.html">Naked Pair guide</a> follows one hint from start to finish on the puzzle scanned above.</p>
 
   <section class="faq">
     <h2>Frequently asked questions</h2>
@@ -200,6 +238,8 @@
     <ul>
       <li><a href="/camerasudoku/guides/sudoku-solving-strategies.html">Sudoku strategies explained</a></li>
       <li><a href="/camerasudoku/guides/sudoku-solver-offline.html">Solve Sudoku offline</a></li>
+      <li><a href="/camerasudoku/guides/naked-pair-sudoku.html">Naked Pairs explained</a></li>
+      <li><a href="/camerasudoku/guides/x-wing-sudoku.html">X-Wing explained</a></li>
     </ul>
   </section>
   <div class="cta-card">
