@@ -41,3 +41,17 @@ document.querySelectorAll('#y').forEach(function (el) {
   el.textContent = new Date().getFullYear();
 });
 
+
+// Workflow video: play while at least half of it is on screen, pause when scrolled away.
+// Left alone (poster + controls) for visitors who prefer reduced motion.
+(function () {
+  var v = document.querySelector('.demo-video video');
+  if (!v || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      else v.pause();
+    });
+  }, { threshold: 0.5 }).observe(v);
+})();

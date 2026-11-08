@@ -246,3 +246,11 @@ footer{padding:46px 0;color:var(--stone);font-size:.92rem}
 [dir="rtl"] .tier li{padding:7px 28px 7px 0}
 [dir="rtl"] .tier li::before{left:auto;right:0}
 [dir="rtl"] .faq summary::after{float:left}
+
+/* workflow video (How it works): portrait screen recording in the hero's phone frame */
+.demo-video{margin:44px auto 0;display:flex;flex-direction:column;align-items:center;gap:16px}
+.demo-phone{width:min(300px,80vw);border-radius:34px;padding:10px;
+  background:linear-gradient(155deg,#1a2a3a,#060b14);box-shadow:var(--shadow-lg)}
+.demo-phone video{display:block;width:100%;height:auto;border-radius:26px;background:#060b14}
+.demo-video figcaption{max-width:52ch;text-align:center;color:var(--ink-soft);font-size:.98rem}
+.demo-video figcaption a{font-weight:600;white-space:nowrap}
